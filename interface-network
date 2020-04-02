@@ -1,0 +1,6 @@
+# /etc/config/network
+
+config interface 'VPN'
+	option ifname 'tun0'
+	option proto 'none'
+
