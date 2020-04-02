@@ -8,7 +8,7 @@ proto udp
 nobind
 persist-key
 persist-tun
-tls-auth  /etc/openvpn/Wdc.key 1     => from the dd-wrt ovpn files under IOS  or kysa 
+tls-auth  /etc/openvpn/Wdc.key 1     => from kysa or https://s3-us-west-1.amazonaws.com/heartbleed/ios/ios-files.zip 
 ca /etc/openvpn/ca.crt        => from ksya
 cipher AES-256-CBC
 comp-lzo
