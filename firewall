@@ -1,0 +1,15 @@
+# /etc/config/firewall
+
+config forwarding
+	option dest 'VPN'
+	option src 'lan'
+
+config zone
+	option network 'VPN'
+	option input 'ACCEPT'
+	option name 'VPN'
+	option output 'ACCEPT'
+	option masq '1'
+	option mtu_fix '1'
+	option forward 'ACCEPT'
+
