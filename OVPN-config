@@ -1,0 +1,27 @@
+#OVPN config file only worked with the following:
+
+client
+
+dev tun
+remote fr2-ovpn-udp.pointtoserver.com 53
+proto udp
+nobind
+persist-key
+persist-tun
+tls-auth  /etc/openvpn/Wdc.key 1     => from the dd-wrt ovpn files under IOS  or kysa 
+ca /etc/openvpn/ca.crt        => from ksya
+cipher AES-256-CBC
+comp-lzo
+
+verb 1
+mute 20
+float
+route-method exe
+route-delay 2
+#key-direction 1
+auth-user-pass /etc/openvpn/PUREFR.auth
+auth-retry interact
+explicit-exit-notify 2
+ifconfig-nowarn
+auth-nocache
+#block-outside-dns
